@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            scWaterConsumption
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="res/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="res/lib/jquerymobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet"
+        />
+        <!-- css -->
+        <link type="text/css" href="files/views/assets/css/jquery.jqplot.css.css" rel="stylesheet"
+        />
+        <script type="text/javascript" src="res/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/1.3.0/jquery.mobile-1.3.0.js">
+        </script>
+        <script type="text/javascript" src="res/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="res/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="res/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="res/lib/childbrowser.js">
+        </script>
+        <script type="text/javascript" src="jquery.jqplot.js">
+        </script>
+        <script type="text/javascript" src="jqplot.barRenderer.js">
+        </script>
+        <link href="res/css/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="files/views/assets/js/jsLib.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jquery.jqplot.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jqplot.barRenderer.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jqplot.categoryAxisRenderer.js.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="scWaterConsumption" id="j_217"
+        class="type-interior" data-theme="a" data-add-back-btn="true" data-back-btn-text="Back">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-theme="a" name="mobileheader"
+            id="j_219" class=' mobileheader9 '>
+                <h1 dsid="mobileheader">
+                    Consumption
+                </h1>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="j_220" name="mobilecontainer" class=" mobilecontainer9"
+            dsid="mobilecontainer" data-theme="">
+                <link href="scWaterConsumption.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="scWaterConsumption.js">
+                </script>
+                <!-- mobilelabel_58 -->
+                <div name="mobilelabel_58" id="j_275" dsid="mobilelabel_58" data-role="appery_label"
+                class=' mobilelabel46 '>
+                    Historical Water Consumption
+                </div>
+                <!-- mobilegrid_4 -->
+                <div class="mobilegrid11_wrapper">
+                    <table id="j_221" class=" mobilegrid11" dsid="mobilegrid_4" name="mobilegrid_4"
+                    cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="mobilegrid11_row_0">
+                            <!-- mobilegridcell_5 -->
+                            <td id="j_222" name="mobilegridcell_5" class="mobilegridcell69" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_31 -->
+                                    <div name="mobilelabel_31" id="j_223" dsid="mobilelabel_31" data-role="appery_label"
+                                    class=' mobilelabel44 '>
+                                        2 years ago
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_6 -->
+                            <td id="j_224" name="mobilegridcell_6" class="mobilegridcell70" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_32 -->
+                                    <div name="mobilelabel_32" id="j_225" dsid="mobilelabel_32" data-role="appery_label"
+                                    class=' mobilelabel45 '>
+                                        1 year ago
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid11_row_1">
+                            <!-- mobilegridcell_7 -->
+                            <td id="j_226" name="mobilegridcell_7" class="mobilegridcell71" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m0 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput29 ">
+                                        <input type="text" name="mobiletextinput_m0" dsid="mobiletextinput_m0" id="j_227"
+                                        placeholder="Input" tabIndex="1" data-theme="a" class=' mobiletextinput29 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_8 -->
+                            <td id="j_228" name="mobilegridcell_8" class="mobilegridcell72" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m12 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput30 ">
+                                        <input type="text" name="mobiletextinput_m12" dsid="mobiletextinput_m12" id="j_229"
+                                        placeholder="Input" tabIndex="2" data-theme="a" class=' mobiletextinput30 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid11_row_2">
+                            <!-- mobilegridcell_9 -->
+                            <td id="j_230" name="mobilegridcell_9" class="mobilegridcell73" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m1 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput31 ">
+                                        <input type="text" name="mobiletextinput_m1" dsid="mobiletextinput_m1" id="j_231"
+                                        placeholder="Input" tabIndex="3" data-theme="a" class=' mobiletextinput31 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_10 -->
+                            <td id="j_232" name="mobilegridcell_10" class="mobilegridcell74" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m13 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput32 ">
+                                        <input type="text" name="mobiletextinput_m13" dsid="mobiletextinput_m13" id="j_233"
+                                        placeholder="Input" tabIndex="4" data-theme="a" class=' mobiletextinput32 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid11_row_3">
+                            <!-- mobilegridcell_11 -->
+                            <td id="j_234" name="mobilegridcell_11" class="mobilegridcell75" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m2 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput33 ">
+                                        <input type="text" name="mobiletextinput_m2" dsid="mobiletextinput_m2" id="j_235"
+                                        placeholder="Input" tabIndex="5" data-theme="a" class=' mobiletextinput33 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_12 -->
+                            <td id="j_236" name="mobilegridcell_12" class="mobilegridcell76" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m14 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput34 ">
+                                        <input type="text" name="mobiletextinput_m14" dsid="mobiletextinput_m14" id="j_237"
+                                        placeholder="Input" tabIndex="6" data-theme="a" class=' mobiletextinput34 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid11_row_4">
+                            <!-- mobilegridcell_13 -->
+                            <td id="j_238" name="mobilegridcell_13" class="mobilegridcell77" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m3 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput35 ">
+                                        <input type="text" name="mobiletextinput_m3" dsid="mobiletextinput_m3" id="j_239"
+                                        placeholder="Input" tabIndex="7" data-theme="a" class=' mobiletextinput35 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_14 -->
+                            <td id="j_240" name="mobilegridcell_14" class="mobilegridcell78" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m15 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput36 ">
+                                        <input type="text" name="mobiletextinput_m15" dsid="mobiletextinput_m15" id="j_241"
+                                        placeholder="Input" tabIndex="8" data-theme="a" class=' mobiletextinput36 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid11_row_5">
+                            <!-- mobilegridcell_15 -->
+                            <td id="j_242" name="mobilegridcell_15" class="mobilegridcell79" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m4 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput37 ">
+                                        <input type="text" name="mobiletextinput_m4" dsid="mobiletextinput_m4" id="j_243"
+                                        placeholder="Input" tabIndex="9" data-theme="a" class=' mobiletextinput37 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_16 -->
+                            <td id="j_244" name="mobilegridcell_16" class="mobilegridcell80" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m16 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput38 ">
+                                        <input type="text" name="mobiletextinput_m16" dsid="mobiletextinput_m16" id="j_245"
+                                        placeholder="Input" tabIndex="10" data-theme="a" class=' mobiletextinput38 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid11_row_6">
+                            <!-- mobilegridcell_17 -->
+                            <td id="j_246" name="mobilegridcell_17" class="mobilegridcell81" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m5 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput39 ">
+                                        <input type="text" name="mobiletextinput_m5" dsid="mobiletextinput_m5" id="j_247"
+                                        placeholder="Input" tabIndex="11" data-theme="a" class=' mobiletextinput39 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_18 -->
+                            <td id="j_248" name="mobilegridcell_18" class="mobilegridcell82" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m17 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput40 ">
+                                        <input type="text" name="mobiletextinput_m17" dsid="mobiletextinput_m17" id="j_249"
+                                        placeholder="Input" tabIndex="12" data-theme="a" class=' mobiletextinput40 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid11_row_7">
+                            <!-- mobilegridcell_19 -->
+                            <td id="j_250" name="mobilegridcell_19" class="mobilegridcell83" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m6 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput41 ">
+                                        <input type="text" name="mobiletextinput_m6" dsid="mobiletextinput_m6" id="j_251"
+                                        placeholder="Input" tabIndex="13" data-theme="a" class=' mobiletextinput41 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_20 -->
+                            <td id="j_252" name="mobilegridcell_20" class="mobilegridcell84" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m18 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput42 ">
+                                        <input type="text" name="mobiletextinput_m18" dsid="mobiletextinput_m18" id="j_253"
+                                        placeholder="Input" tabIndex="14" data-theme="a" class=' mobiletextinput42 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid11_row_8">
+                            <!-- mobilegridcell_21 -->
+                            <td id="j_254" name="mobilegridcell_21" class="mobilegridcell85" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m7 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput43 ">
+                                        <input type="text" name="mobiletextinput_m7" dsid="mobiletextinput_m7" id="j_255"
+                                        placeholder="Input" tabIndex="15" data-theme="a" class=' mobiletextinput43 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_22 -->
+                            <td id="j_256" name="mobilegridcell_22" class="mobilegridcell86" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m19 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput44 ">
+                                        <input type="text" name="mobiletextinput_m19" dsid="mobiletextinput_m19" id="j_257"
+                                        placeholder="Input" tabIndex="16" data-theme="a" class=' mobiletextinput44 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid11_row_9">
+                            <!-- mobilegridcell_23 -->
+                            <td id="j_258" name="mobilegridcell_23" class="mobilegridcell87" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m8 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput45 ">
+                                        <input type="text" name="mobiletextinput_m8" dsid="mobiletextinput_m8" id="j_259"
+                                        placeholder="Input" tabIndex="17" data-theme="a" class=' mobiletextinput45 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_24 -->
+                            <td id="j_260" name="mobilegridcell_24" class="mobilegridcell88" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m20 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput46 ">
+                                        <input type="text" name="mobiletextinput_m20" dsid="mobiletextinput_m20" id="j_261"
+                                        placeholder="Input" tabIndex="18" data-theme="a" class=' mobiletextinput46 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid11_row_10">
+                            <!-- mobilegridcell_25 -->
+                            <td id="j_262" name="mobilegridcell_25" class="mobilegridcell89" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m9 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput47 ">
+                                        <input type="text" name="mobiletextinput_m9" dsid="mobiletextinput_m9" id="j_263"
+                                        placeholder="Input" tabIndex="19" data-theme="a" class=' mobiletextinput47 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_26 -->
+                            <td id="j_264" name="mobilegridcell_26" class="mobilegridcell90" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m21 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput48 ">
+                                        <input type="text" name="mobiletextinput_m21" dsid="mobiletextinput_m21" id="j_265"
+                                        placeholder="Input" tabIndex="20" data-theme="a" class=' mobiletextinput48 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid11_row_11">
+                            <!-- mobilegridcell_27 -->
+                            <td id="j_266" name="mobilegridcell_27" class="mobilegridcell91" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m10 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput49 ">
+                                        <input type="text" name="mobiletextinput_m10" dsid="mobiletextinput_m10" id="j_267"
+                                        placeholder="Input" tabIndex="21" data-theme="a" class=' mobiletextinput49 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_28 -->
+                            <td id="j_268" name="mobilegridcell_28" class="mobilegridcell92" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m22 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput50 ">
+                                        <input type="text" name="mobiletextinput_m22" dsid="mobiletextinput_m22" id="j_269"
+                                        placeholder="Input" tabIndex="22" data-theme="a" class=' mobiletextinput50 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid11_row_12">
+                            <!-- mobilegridcell_29 -->
+                            <td id="j_270" name="mobilegridcell_29" class="mobilegridcell93" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m11 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput51 ">
+                                        <input type="text" name="mobiletextinput_m11" dsid="mobiletextinput_m11" id="j_271"
+                                        placeholder="Input" tabIndex="23" data-theme="a" class=' mobiletextinput51 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_30 -->
+                            <td id="j_272" name="mobilegridcell_30" class="mobilegridcell94" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_m23 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput52 ">
+                                        <input type="text" name="mobiletextinput_m23" dsid="mobiletextinput_m23" id="j_273"
+                                        placeholder="Input" tabIndex="24" data-theme="a" class=' mobiletextinput52 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- mobilebutton_57 -->
+                <a data-role="button" name="mobilebutton_57" dsid="mobilebutton_57" class='  mobilebutton10'
+                id='j_274' data-corners="true" data-icon="arrow-r" data-iconpos="right" data-mini="false"
+                data-theme="a" tabIndex="25">
+                Next
+                </a>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class=" mobilefooter9" name="mobilefooter1"
+            dsid="mobilefooter1" id="j_276" data-theme="a">
+            </div>
+        </div>
+    </body>
+
+</html>

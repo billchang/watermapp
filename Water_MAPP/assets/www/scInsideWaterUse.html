@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            scInsideWaterUse
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="res/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="res/lib/jquerymobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet"
+        />
+        <!-- css -->
+        <link type="text/css" href="files/views/assets/css/jquery.jqplot.css.css" rel="stylesheet"
+        />
+        <script type="text/javascript" src="res/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/1.3.0/jquery.mobile-1.3.0.js">
+        </script>
+        <script type="text/javascript" src="res/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="res/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="res/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="res/lib/childbrowser.js">
+        </script>
+        <script type="text/javascript" src="jquery.jqplot.js">
+        </script>
+        <script type="text/javascript" src="jqplot.barRenderer.js">
+        </script>
+        <link href="res/css/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="files/views/assets/js/jsLib.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jquery.jqplot.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jqplot.barRenderer.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jqplot.categoryAxisRenderer.js.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="scInsideWaterUse" id="j_139"
+        class="type-interior" data-theme="a" data-add-back-btn="true" data-back-btn-text="Back">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-theme="a" name="mobileheader"
+            id="j_141" class=' mobileheader6 '>
+                <h1 dsid="mobileheader">
+                    Inside Water Use
+                </h1>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="j_142" name="mobilecontainer" class=" mobilecontainer6"
+            dsid="mobilecontainer" data-theme="">
+                <link href="scInsideWaterUse.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="scInsideWaterUse.js">
+                </script>
+                <!-- mobilegrid_2 -->
+                <div class="mobilegrid8_wrapper">
+                    <table id="j_143" class=" mobilegrid8" dsid="mobilegrid_2" name="mobilegrid_2" cellpadding=0
+                    cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="mobilegrid8_row_0">
+                            <!-- mobilegridcell_3 -->
+                            <td id="j_144" name="mobilegridcell_3" class="mobilegridcell45" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_13 -->
+                                    <div name="mobilelabel_13" id="j_145" dsid="mobilelabel_13" data-role="appery_label"
+                                    class=' mobilelabel29 '>
+                                        Do you have faucet aerators on your sinks?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_4 -->
+                            <td id="j_146" name="mobilegridcell_4" class="mobilegridcell46" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileselectmenu1_18 -->
+                                    <div data-role="fieldcontain" class="mobileselectmenu2 ">
+                                        <select name="mobileselectmenu1_18" id="j_147" dsid="mobileselectmenu1_18" data-theme="a"
+                                        data-inline="false" data-mini="true" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                                        tabIndex="1" appery-class="mobileselectmenu2">
+                                            <option value='0' reRender='mobileselectmenu1_18' dsid='mobileselectmenu1_18-0'
+                                            selected="selected">
+                                                None
+                                            </option>
+                                            <option value='70' reRender='mobileselectmenu1_18' dsid='mobileselectmenu1_18-1'>
+                                                Low-flow aerators installed on
+                                                <50% faucets </option>
+                                                    <option value='85' reRender='mobileselectmenu1_18' dsid='mobileselectmenu1_18-2'>
+                                                        Low-flow aerators installed on between 50-74% faucets
+                                                    </option>
+                                                    <option value='100' reRender='mobileselectmenu1_18' dsid='mobileselectmenu1_18-3'>
+                                                        Low-flow aerators installed on between 75-100% faucets
+                                                    </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid8_row_1">
+                            <!-- mobilegridcell_5 -->
+                            <td id="j_149" name="mobilegridcell_5" class="mobilegridcell47" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_14 -->
+                                    <div name="mobilelabel_14" id="j_150" dsid="mobilelabel_14" data-role="appery_label"
+                                    class=' mobilelabel30 '>
+                                        How about high-efficiency fixtures?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_6 -->
+                            <td id="j_151" name="mobilegridcell_6" class="mobilegridcell48" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid8_row_2">
+                            <!-- mobilegridcell_7 -->
+                            <td id="j_152" name="mobilegridcell_7" class="mobilegridcell49" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_15 -->
+                                    <div name="mobilelabel_15" id="j_153" dsid="mobilelabel_15" data-role="appery_label"
+                                    class=' mobilelabel31 '>
+                                        Low Flow Toilets?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_8 -->
+                            <td id="j_154" name="mobilegridcell_8" class="mobilegridcell50" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileselectmenu1_20 -->
+                                    <div data-role="fieldcontain" class="mobileselectmenu3 ">
+                                        <select name="mobileselectmenu1_20" id="j_155" dsid="mobileselectmenu1_20" data-theme="a"
+                                        data-inline="false" data-mini="true" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                                        tabIndex="2" appery-class="mobileselectmenu3">
+                                            <option value='60' reRender='mobileselectmenu1_20' dsid='mobileselectmenu1_20-0'
+                                            selected="selected">
+                                                None
+                                            </option>
+                                            <option value='80' reRender='mobileselectmenu1_20' dsid='mobileselectmenu1_20-1'>
+                                                Some
+                                            </option>
+                                            <option value='100' reRender='mobileselectmenu1_20' dsid='mobileselectmenu1_20-2'>
+                                                All
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid8_row_3">
+                            <!-- mobilegridcell_9 -->
+                            <td id="j_157" name="mobilegridcell_9" class="mobilegridcell51" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_16 -->
+                                    <div name="mobilelabel_16" id="j_158" dsid="mobilelabel_16" data-role="appery_label"
+                                    class=' mobilelabel32 '>
+                                        Ultra Low-Flow Toilets
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_10 -->
+                            <td id="j_159" name="mobilegridcell_10" class="mobilegridcell52" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileselectmenu1_22 -->
+                                    <div data-role="fieldcontain" class="mobileselectmenu4 ">
+                                        <select name="mobileselectmenu1_22" id="j_160" dsid="mobileselectmenu1_22" data-theme="a"
+                                        data-inline="false" data-mini="true" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                                        tabIndex="3" appery-class="mobileselectmenu4">
+                                            <option value='60' reRender='mobileselectmenu1_22' dsid='mobileselectmenu1_22-0'
+                                            selected="selected">
+                                                None
+                                            </option>
+                                            <option value='80' reRender='mobileselectmenu1_22' dsid='mobileselectmenu1_22-1'>
+                                                Some
+                                            </option>
+                                            <option value='100' reRender='mobileselectmenu1_22' dsid='mobileselectmenu1_22-2'>
+                                                All
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid8_row_4">
+                            <!-- mobilegridcell_11 -->
+                            <td id="j_162" name="mobilegridcell_11" class="mobilegridcell53" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_17 -->
+                                    <div name="mobilelabel_17" id="j_163" dsid="mobilelabel_17" data-role="appery_label"
+                                    class=' mobilelabel33 '>
+                                        Automatic Controls?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_12 -->
+                            <td id="j_164" name="mobilegridcell_12" class="mobilegridcell54" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileselectmenu1_24 -->
+                                    <div data-role="fieldcontain" class="mobileselectmenu5 ">
+                                        <select name="mobileselectmenu1_24" id="j_165" dsid="mobileselectmenu1_24" data-theme="a"
+                                        data-inline="false" data-mini="true" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                                        tabIndex="4" appery-class="mobileselectmenu5">
+                                            <option value='60' reRender='mobileselectmenu1_24' dsid='mobileselectmenu1_24-0'
+                                            selected="selected">
+                                                None
+                                            </option>
+                                            <option value='80' reRender='mobileselectmenu1_24' dsid='mobileselectmenu1_24-1'>
+                                                Some
+                                            </option>
+                                            <option value='100' reRender='mobileselectmenu1_24' dsid='mobileselectmenu1_24-2'>
+                                                All
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- mobilebutton_26 -->
+                <a data-role="button" name="mobilebutton_26" dsid="mobilebutton_26" class='  mobilebutton8'
+                id='j_167' data-corners="true" data-icon="arrow-r" data-iconpos="right" data-mini="false"
+                data-theme="a" tabIndex="5">
+                Next
+                </a>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class=" mobilefooter6" name="mobilefooter1"
+            dsid="mobilefooter1" id="j_168" data-theme="a">
+            </div>
+        </div>
+    </body>
+
+</html>

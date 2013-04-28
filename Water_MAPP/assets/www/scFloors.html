@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            scFloors
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="res/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="res/lib/jquerymobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet"
+        />
+        <!-- css -->
+        <link type="text/css" href="files/views/assets/css/jquery.jqplot.css.css" rel="stylesheet"
+        />
+        <script type="text/javascript" src="res/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/1.3.0/jquery.mobile-1.3.0.js">
+        </script>
+        <script type="text/javascript" src="res/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="res/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="res/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="res/lib/childbrowser.js">
+        </script>
+        <script type="text/javascript" src="jquery.jqplot.js">
+        </script>
+        <script type="text/javascript" src="jqplot.barRenderer.js">
+        </script>
+        <link href="res/css/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="files/views/assets/js/jsLib.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jquery.jqplot.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jqplot.barRenderer.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jqplot.categoryAxisRenderer.js.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="scFloors" id="j_439" class="type-interior"
+        data-theme="a" data-add-back-btn="true" data-back-btn-text="Back">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-theme="a" name="mobileheader"
+            id="j_441" class=' mobileheader15 '>
+                <h1 dsid="mobileheader">
+                    Floors
+                </h1>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="j_442" name="mobilecontainer" class=" mobilecontainer15"
+            dsid="mobilecontainer" data-theme="">
+                <link href="scFloors.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="scFloors.js">
+                </script>
+                <!-- mobilelabel_2 -->
+                <div name="mobilelabel_2" id="j_443" dsid="mobilelabel_2" data-role="appery_label"
+                class=' mobilelabel73 '>
+                    How many floors are in the building?
+                </div>
+                <!-- floors -->
+                <div data-role="fieldcontain" class="mobiletextinput78 ">
+                    <input type="number" name="floors" dsid="floors" id="j_444" value="4" tabIndex="1"
+                    data-theme="a" class=' mobiletextinput78 ' />
+                </div>
+                <!-- mobilebutton_4 -->
+                <a data-role="button" name="mobilebutton_4" dsid="mobilebutton_4" class='  mobilebutton15'
+                id='j_445' data-corners="true" data-icon="arrow-r" data-iconpos="right" data-mini="false"
+                data-theme="a" tabIndex="2">
+                Next
+                </a>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class=" mobilefooter15" name="mobilefooter1"
+            dsid="mobilefooter1" id="j_446" data-theme="a">
+            </div>
+        </div>
+    </body>
+
+</html>

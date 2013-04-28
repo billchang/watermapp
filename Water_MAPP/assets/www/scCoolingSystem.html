@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            scCoolingSystem
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="res/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="res/lib/jquerymobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet"
+        />
+        <!-- css -->
+        <link type="text/css" href="files/views/assets/css/jquery.jqplot.css.css" rel="stylesheet"
+        />
+        <script type="text/javascript" src="res/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/1.3.0/jquery.mobile-1.3.0.js">
+        </script>
+        <script type="text/javascript" src="res/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="res/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="res/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="res/lib/childbrowser.js">
+        </script>
+        <script type="text/javascript" src="jquery.jqplot.js">
+        </script>
+        <script type="text/javascript" src="jqplot.barRenderer.js">
+        </script>
+        <link href="res/css/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="files/views/assets/js/jsLib.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jquery.jqplot.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jqplot.barRenderer.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jqplot.categoryAxisRenderer.js.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="scCoolingSystem" id="j_340"
+        class="type-interior" data-theme="a" data-add-back-btn="true" data-back-btn-text="Back">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-theme="a" name="mobileheader"
+            id="j_342" class=' mobileheader14 '>
+                <h1 dsid="mobileheader">
+                    Cooling Systems
+                </h1>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="j_343" name="mobilecontainer" class=" mobilecontainer14"
+            dsid="mobilecontainer" data-theme="">
+                <link href="scCoolingSystem.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="scCoolingSystem.js">
+                </script>
+                <!-- mobilegrid_2 -->
+                <div class="mobilegrid13_wrapper">
+                    <table id="j_344" class=" mobilegrid13" dsid="mobilegrid_2" name="mobilegrid_2"
+                    cellpadding=0 cellspacing=0>
+                        <col style="width:151px;" />
+                        <col style="width:auto;" />
+                        <tr class="mobilegrid13_row_0">
+                            <!-- mobilegridcell_3 -->
+                            <td id="j_345" name="mobilegridcell_3" class="mobilegridcell99" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_5 -->
+                                    <div name="mobilelabel_5" id="j_346" dsid="mobilelabel_5" data-role="appery_label"
+                                    class=' mobilelabel52 '>
+                                        Does your building use a cooling tower?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_4 -->
+                            <td id="j_347" name="mobilegridcell_4" class="mobilegridcell100" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileselectmenu1_46 -->
+                                    <div data-role="fieldcontain" class="mobileselectmenu8 ">
+                                        <select name="mobileselectmenu1_46" id="j_348" dsid="mobileselectmenu1_46" data-theme="a"
+                                        data-inline="false" data-mini="false" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                                        tabIndex="1" appery-class="mobileselectmenu8">
+                                            <option value='yes' reRender='mobileselectmenu1_46' dsid='mobileselectmenu1_46-0'
+                                            selected="selected">
+                                                Yes
+                                            </option>
+                                            <option value='no' reRender='mobileselectmenu1_46' dsid='mobileselectmenu1_46-1'>
+                                                No
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_1">
+                            <!-- mobilegridcell_8 -->
+                            <td id="j_350" name="mobilegridcell_8" class="mobilegridcell101" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_48 -->
+                                    <div name="mobilelabel_48" id="j_351" dsid="mobilelabel_48" data-role="appery_label"
+                                    class=' mobilelabel53 '>
+                                        What cooling tower water efficiency efforts have you done?:
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_9 -->
+                            <td id="j_352" name="mobilegridcell_9" class="mobilegridcell102" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileselectmenu1_49 -->
+                                    <div data-role="fieldcontain" class="mobileselectmenu9 ">
+                                        <select name="mobileselectmenu1_49" id="j_353" dsid="mobileselectmenu1_49" data-theme="a"
+                                        data-inline="false" data-mini="false" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                                        tabIndex="2" appery-class="mobileselectmenu9">
+                                            <option value='0' reRender='mobileselectmenu1_49' dsid='mobileselectmenu1_49-0'
+                                            selected="selected">
+                                                None
+                                            </option>
+                                            <option value='80' reRender='mobileselectmenu1_49' dsid='mobileselectmenu1_49-1'>
+                                                Blow-down water is measured/monitored; PMs done
+                                            </option>
+                                            <option value='90' reRender='mobileselectmenu1_49' dsid='mobileselectmenu1_49-2'>
+                                                Maintenance is optimized to reduce blow-down
+                                            </option>
+                                            <option value='100' reRender='mobileselectmenu1_49' dsid='mobileselectmenu1_49-3'>
+                                                System design to minimize blowdown (special tech) Or N/A
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_2">
+                            <!-- mobilegridcell_10 -->
+                            <td id="j_355" name="mobilegridcell_10" class="mobilegridcell103" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_51 -->
+                                    <div name="mobilelabel_51" id="j_356" dsid="mobilelabel_51" data-role="appery_label"
+                                    class=' mobilelabel54 '>
+                                        What are your current average Cycles of Concentration (COC)?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_11 -->
+                            <td id="j_357" name="mobilegridcell_11" class="mobilegridcell104" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_72 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput64 ">
+                                        <input type="number" name="mobiletextinput_72" dsid="mobiletextinput_72" id="j_358"
+                                        value="4.0" tabIndex="3" data-theme="a" class=' mobiletextinput64 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_3">
+                            <!-- mobilegridcell_12 -->
+                            <td id="j_359" name="mobilegridcell_12" class="mobilegridcell105" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_52 -->
+                                    <div name="mobilelabel_52" id="j_360" dsid="mobilelabel_52" data-role="appery_label"
+                                    class=' mobilelabel55 '>
+                                        What is your target Cycles of Concentration? Recommended 10
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_13 -->
+                            <td id="j_361" name="mobilegridcell_13" class="mobilegridcell106" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_73 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput65 ">
+                                        <input type="number" name="mobiletextinput_73" dsid="mobiletextinput_73" id="j_362"
+                                        value="10.0" tabIndex="4" data-theme="a" class=' mobiletextinput65 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_4">
+                            <!-- mobilegridcell_14 -->
+                            <td id="j_363" name="mobilegridcell_14" class="mobilegridcell107" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_53 -->
+                                    <div name="mobilelabel_53" id="j_364" dsid="mobilelabel_53" data-role="appery_label"
+                                    class=' mobilelabel56 '>
+                                        What cooling tower water efficiency efforts have you done?:
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_15 -->
+                            <td id="j_365" name="mobilegridcell_15" class="mobilegridcell108" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileselectmenu1_70 -->
+                                    <div data-role="fieldcontain" class="mobileselectmenu10 ">
+                                        <select name="mobileselectmenu1_70" id="j_366" dsid="mobileselectmenu1_70" data-theme="a"
+                                        data-inline="false" data-mini="false" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                                        tabIndex="5" appery-class="mobileselectmenu10">
+                                            <option value='0' reRender='mobileselectmenu1_70' dsid='mobileselectmenu1_70-0'
+                                            selected="selected">
+                                                None
+                                            </option>
+                                            <option value='80' reRender='mobileselectmenu1_70' dsid='mobileselectmenu1_70-1'>
+                                                Blow-down water is measured/monitored; PMs done
+                                            </option>
+                                            <option value='90' reRender='mobileselectmenu1_70' dsid='mobileselectmenu1_70-2'>
+                                                Maintenance is optimized to reduce blow-down
+                                            </option>
+                                            <option value='100' reRender='mobileselectmenu1_70' dsid='mobileselectmenu1_70-3'>
+                                                System design to minimize blowdown (special tech) Or N/A
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_5">
+                            <!-- mobilegridcell_16 -->
+                            <td id="j_368" name="mobilegridcell_16" class="mobilegridcell109" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_54 -->
+                                    <div name="mobilelabel_54" id="j_369" dsid="mobilelabel_54" data-role="appery_label"
+                                    class=' mobilelabel57 '>
+                                        Annual Peak Load on Chillers (tons):
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_17 -->
+                            <td id="j_370" name="mobilegridcell_17" class="mobilegridcell110" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_74 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput66 ">
+                                        <input type="number" name="mobiletextinput_74" dsid="mobiletextinput_74" id="j_371"
+                                        value="Input" tabIndex="6" data-theme="a" class=' mobiletextinput66 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_6">
+                            <!-- mobilegridcell_18 -->
+                            <td id="j_372" name="mobilegridcell_18" class="mobilegridcell111" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_55 -->
+                                    <div name="mobilelabel_55" id="j_373" dsid="mobilelabel_55" data-role="appery_label"
+                                    class=' mobilelabel58 '>
+                                        Total Cooling Capacity of Chillers:
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_19 -->
+                            <td id="j_374" name="mobilegridcell_19" class="mobilegridcell112" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_85 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput67 ">
+                                        <input type="number" name="mobiletextinput_85" dsid="mobiletextinput_85" id="j_375"
+                                        value="Input" tabIndex="7" data-theme="a" class=' mobiletextinput67 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_7">
+                            <!-- mobilegridcell_20 -->
+                            <td id="j_376" name="mobilegridcell_20" class="mobilegridcell113" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_56 -->
+                                    <div name="mobilelabel_56" id="j_377" dsid="mobilelabel_56" data-role="appery_label"
+                                    class=' mobilelabel59 '>
+                                        Chiller Efficiency (kW/Ton)
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_21 -->
+                            <td id="j_378" name="mobilegridcell_21" class="mobilegridcell114" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_86 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput68 ">
+                                        <input type="number" name="mobiletextinput_86" dsid="mobiletextinput_86" id="j_379"
+                                        value="1.00" tabIndex="8" data-theme="a" class=' mobiletextinput68 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_8">
+                            <!-- mobilegridcell_22 -->
+                            <td id="j_380" name="mobilegridcell_22" class="mobilegridcell115" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_57 -->
+                                    <div name="mobilelabel_57" id="j_381" dsid="mobilelabel_57" data-role="appery_label"
+                                    class=' mobilelabel60 '>
+                                        Chemicals (lbs) used per 1,000 gal (Kgal)
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_23 -->
+                            <td id="j_382" name="mobilegridcell_23" class="mobilegridcell116" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_87 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput69 ">
+                                        <input type="number" name="mobiletextinput_87" dsid="mobiletextinput_87" id="j_383"
+                                        value="5" tabIndex="9" data-theme="a" class=' mobiletextinput69 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_9">
+                            <!-- mobilegridcell_24 -->
+                            <td id="j_384" name="mobilegridcell_24" class="mobilegridcell117" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_58 -->
+                                    <div name="mobilelabel_58" id="j_385" dsid="mobilelabel_58" data-role="appery_label"
+                                    class=' mobilelabel61 '>
+                                        Water Treatment Cost ($) per Kgal
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_25 -->
+                            <td id="j_386" name="mobilegridcell_25" class="mobilegridcell118" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_90 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput70 ">
+                                        <input type="number" name="mobiletextinput_90" dsid="mobiletextinput_90" id="j_387"
+                                        value="Input" tabIndex="10" data-theme="a" class=' mobiletextinput70 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_10">
+                            <!-- mobilegridcell_26 -->
+                            <td id="j_388" name="mobilegridcell_26" class="mobilegridcell119" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_59 -->
+                                    <div name="mobilelabel_59" id="j_389" dsid="mobilelabel_59" data-role="appery_label"
+                                    class=' mobilelabel62 '>
+                                        Electricity charge per kWh
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_27 -->
+                            <td id="j_390" name="mobilegridcell_27" class="mobilegridcell120" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_91 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput71 ">
+                                        <input type="number" name="mobiletextinput_91" dsid="mobiletextinput_91" id="j_391"
+                                        value="Input" tabIndex="11" data-theme="a" class=' mobiletextinput71 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_11">
+                            <!-- mobilegridcell_28 -->
+                            <td id="j_392" name="mobilegridcell_28" class="mobilegridcell121" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_60 -->
+                                    <div name="mobilelabel_60" id="j_393" dsid="mobilelabel_60" data-role="appery_label"
+                                    class=' mobilelabel63 '>
+                                        Water charge per Kgal
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_29 -->
+                            <td id="j_394" name="mobilegridcell_29" class="mobilegridcell122" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_92 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput72 ">
+                                        <input type="number" name="mobiletextinput_92" dsid="mobiletextinput_92" id="j_395"
+                                        value="Input" tabIndex="12" data-theme="a" class=' mobiletextinput72 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_12">
+                            <!-- mobilegridcell_30 -->
+                            <td id="j_396" name="mobilegridcell_30" class="mobilegridcell123" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_61 -->
+                                    <div name="mobilelabel_61" id="j_397" dsid="mobilelabel_61" data-role="appery_label"
+                                    class=' mobilelabel64 '>
+                                        Sewage charge per Kgal
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_31 -->
+                            <td id="j_398" name="mobilegridcell_31" class="mobilegridcell124" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_93 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput73 ">
+                                        <input type="number" name="mobiletextinput_93" dsid="mobiletextinput_93" id="j_399"
+                                        value="Input" tabIndex="13" data-theme="a" class=' mobiletextinput73 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_13">
+                            <!-- mobilegridcell_32 -->
+                            <td id="j_400" name="mobilegridcell_32" class="mobilegridcell125" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_62 -->
+                                    <div name="mobilelabel_62" id="j_401" dsid="mobilelabel_62" data-role="appery_label"
+                                    class=' mobilelabel65 '>
+                                        Sewage credit per kgal
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_33 -->
+                            <td id="j_402" name="mobilegridcell_33" class="mobilegridcell126" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_94 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput74 ">
+                                        <input type="number" name="mobiletextinput_94" dsid="mobiletextinput_94" id="j_403"
+                                        value="Input" tabIndex="14" data-theme="a" class=' mobiletextinput74 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_14">
+                            <!-- mobilegridcell_34 -->
+                            <td id="j_404" name="mobilegridcell_34" class="mobilegridcell127" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_63 -->
+                                    <div name="mobilelabel_63" id="j_405" dsid="mobilelabel_63" data-role="appery_label"
+                                    class=' mobilelabel66 '>
+                                        Can you measure water entering tower (Makeup Meter)?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_35 -->
+                            <td id="j_406" name="mobilegridcell_35" class="mobilegridcell128" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileselectmenu1_95 -->
+                                    <div data-role="fieldcontain" class="mobileselectmenu11 ">
+                                        <select name="mobileselectmenu1_95" id="j_407" dsid="mobileselectmenu1_95" data-theme="a"
+                                        data-inline="false" data-mini="false" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                                        tabIndex="15" appery-class="mobileselectmenu11">
+                                            <option value='yes' reRender='mobileselectmenu1_95' dsid='mobileselectmenu1_95-0'
+                                            selected="selected">
+                                                Yes
+                                            </option>
+                                            <option value='no' reRender='mobileselectmenu1_95' dsid='mobileselectmenu1_95-1'>
+                                                No
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_15">
+                            <!-- mobilegridcell_75 -->
+                            <td id="j_409" name="mobilegridcell_75" class="mobilegridcell129" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_64 -->
+                                    <div name="mobilelabel_64" id="j_410" dsid="mobilelabel_64" data-role="appery_label"
+                                    class=' mobilelabel67 '>
+                                        If Yes, what is the annual Makeup in gallons?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_76 -->
+                            <td id="j_411" name="mobilegridcell_76" class="mobilegridcell130" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_97 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput75 ">
+                                        <input type="number" name="mobiletextinput_97" dsid="mobiletextinput_97" id="j_412"
+                                        value="Input" tabIndex="16" data-theme="a" class=' mobiletextinput75 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_16">
+                            <!-- mobilegridcell_77 -->
+                            <td id="j_413" name="mobilegridcell_77" class="mobilegridcell131" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_65 -->
+                                    <div name="mobilelabel_65" id="j_414" dsid="mobilelabel_65" data-role="appery_label"
+                                    class=' mobilelabel68 '>
+                                        Can you measure water being blown down (Bleed Meter)?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_78 -->
+                            <td id="j_415" name="mobilegridcell_78" class="mobilegridcell132" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileselectmenu1_98 -->
+                                    <div data-role="fieldcontain" class="mobileselectmenu12 ">
+                                        <select name="mobileselectmenu1_98" id="j_416" dsid="mobileselectmenu1_98" data-theme="a"
+                                        data-inline="false" data-mini="false" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                                        tabIndex="17" appery-class="mobileselectmenu12">
+                                            <option value='yes' reRender='mobileselectmenu1_98' dsid='mobileselectmenu1_98-0'
+                                            selected="selected">
+                                                Yes
+                                            </option>
+                                            <option value='no' reRender='mobileselectmenu1_98' dsid='mobileselectmenu1_98-1'>
+                                                No
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_17">
+                            <!-- mobilegridcell_79 -->
+                            <td id="j_418" name="mobilegridcell_79" class="mobilegridcell133" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_66 -->
+                                    <div name="mobilelabel_66" id="j_419" dsid="mobilelabel_66" data-role="appery_label"
+                                    class=' mobilelabel69 '>
+                                        If Yes, what is the annual bleed in gallons?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_80 -->
+                            <td id="j_420" name="mobilegridcell_80" class="mobilegridcell134" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_100 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput76 ">
+                                        <input type="number" name="mobiletextinput_100" dsid="mobiletextinput_100" id="j_421"
+                                        value="Input" tabIndex="18" data-theme="a" class=' mobiletextinput76 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_18">
+                            <!-- mobilegridcell_81 -->
+                            <td id="j_422" name="mobilegridcell_81" class="mobilegridcell135" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_67 -->
+                                    <div name="mobilelabel_67" id="j_423" dsid="mobilelabel_67" data-role="appery_label"
+                                    class=' mobilelabel70 '>
+                                        Describe the primary water treatment system:
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_82 -->
+                            <td id="j_424" name="mobilegridcell_82" class="mobilegridcell136" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileselectmenu1_104 -->
+                                    <div data-role="fieldcontain" class="mobileselectmenu13 ">
+                                        <select name="mobileselectmenu1_104" id="j_425" dsid="mobileselectmenu1_104" data-theme="a"
+                                        data-inline="false" data-mini="false" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                                        tabIndex="19" appery-class="mobileselectmenu13">
+                                            <option value='TraditionalChemistry' reRender='mobileselectmenu1_104' dsid='mobileselectmenu1_104-0'
+                                            selected="selected">
+                                                Traditional Chemistry
+                                            </option>
+                                            <option value='TraditionalWaterSofteners' reRender='mobileselectmenu1_104' dsid='mobileselectmenu1_104-1'>
+                                                Traditional Water Softeners
+                                            </option>
+                                            <option value='InnovativeTechnology' reRender='mobileselectmenu1_104' dsid='mobileselectmenu1_104-2'>
+                                                Innovative Technology
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_19">
+                            <!-- mobilegridcell_83 -->
+                            <td id="j_427" name="mobilegridcell_83" class="mobilegridcell137" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_68 -->
+                                    <div name="mobilelabel_68" id="j_428" dsid="mobilelabel_68" data-role="appery_label"
+                                    class=' mobilelabel71 '>
+                                        Current Annual Water Treatment Costs
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_84 -->
+                            <td id="j_429" name="mobilegridcell_84" class="mobilegridcell138" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput_101 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput77 ">
+                                        <input type="number" name="mobiletextinput_101" dsid="mobiletextinput_101" id="j_430"
+                                        value="Input" tabIndex="20" data-theme="a" class=' mobiletextinput77 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid13_row_20">
+                            <!-- mobilegridcell_88 -->
+                            <td id="j_431" name="mobilegridcell_88" class="mobilegridcell139" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_69 -->
+                                    <div name="mobilelabel_69" id="j_432" dsid="mobilelabel_69" data-role="appery_label"
+                                    class=' mobilelabel72 '>
+                                        Does the building utilize a Free Air Economizer?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_89 -->
+                            <td id="j_433" name="mobilegridcell_89" class="mobilegridcell140" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobileselectmenu1_102 -->
+                                    <div data-role="fieldcontain" class="mobileselectmenu14 ">
+                                        <select name="mobileselectmenu1_102" id="j_434" dsid="mobileselectmenu1_102" data-theme="a"
+                                        data-inline="false" data-mini="false" data-icon="arrow-d" data-iconpos="right" data-native-menu="false"
+                                        tabIndex="21" appery-class="mobileselectmenu14">
+                                            <option value='5847' reRender='mobileselectmenu1_102' dsid='mobileselectmenu1_102-0'
+                                            selected="selected">
+                                                No Economizer
+                                            </option>
+                                            <option value='3756' reRender='mobileselectmenu1_102' dsid='mobileselectmenu1_102-1'>
+                                                Full Economizer
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- mobilebutton_106 -->
+                <a data-role="button" name="mobilebutton_106" dsid="mobilebutton_106" class='  mobilebutton14'
+                id='j_436' data-corners="true" data-mini="false" data-theme="a" tabIndex="22">
+                Next
+                </a>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class=" mobilefooter14" name="mobilefooter1"
+            dsid="mobilefooter1" id="j_437" data-theme="a">
+            </div>
+        </div>
+    </body>
+
+</html>

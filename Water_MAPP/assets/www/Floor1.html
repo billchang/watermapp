@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Floor1
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="res/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="res/lib/jquerymobile/1.3.0/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet"
+        />
+        <!-- css -->
+        <link type="text/css" href="files/views/assets/css/jquery.jqplot.css.css" rel="stylesheet"
+        />
+        <script type="text/javascript" src="res/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="res/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="res/lib/jquerymobile/1.3.0/jquery.mobile-1.3.0.js">
+        </script>
+        <script type="text/javascript" src="res/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="res/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="res/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="res/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="res/lib/childbrowser.js">
+        </script>
+        <script type="text/javascript" src="jquery.jqplot.js">
+        </script>
+        <script type="text/javascript" src="jqplot.barRenderer.js">
+        </script>
+        <link href="res/css/mobilebase.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="files/views/assets/js/jsLib.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jquery.jqplot.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jqplot.barRenderer.js.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/jqplot.categoryAxisRenderer.js.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="Floor1" id="j_178" class="type-interior"
+        data-theme="a" data-add-back-btn="true" data-back-btn-text="Back">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-theme="a" name="mobileheader"
+            id="j_180" class=' mobileheader8 '>
+                <h1 dsid="mobileheader">
+                    Floor 1
+                </h1>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="j_181" name="mobilecontainer" class=" mobilecontainer8"
+            dsid="mobilecontainer" data-theme="">
+                <link href="Floor1.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="Floor1.js">
+                </script>
+                <!-- mobilelabel_34 -->
+                <div name="mobilelabel_34" id="j_204" dsid="mobilelabel_34" data-role="appery_label"
+                class=' mobilelabel41 '>
+                    Water Use
+                </div>
+                <!-- mobilegrid_35 -->
+                <div class="mobilegrid10_wrapper">
+                    <table id="j_205" class=" mobilegrid10" dsid="mobilegrid_35" name="mobilegrid_35"
+                    cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="mobilegrid10_row_0">
+                            <!-- mobilegridcell_36 -->
+                            <td id="j_206" name="mobilegridcell_36" class="mobilegridcell65" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_40 -->
+                                    <div name="mobilelabel_40" id="j_207" dsid="mobilelabel_40" data-role="appery_label"
+                                    class=' mobilelabel42 '>
+                                        How many sinks?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_37 -->
+                            <td id="j_208" name="mobilegridcell_37" class="mobilegridcell66" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- numOfSinks1 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput27 ">
+                                        <input type="number" name="numOfSinks1" dsid="numOfSinks1" id="j_209" value="Input"
+                                        tabIndex="6" data-theme="a" class=' mobiletextinput27 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid10_row_1">
+                            <!-- mobilegridcell_38 -->
+                            <td id="j_210" name="mobilegridcell_38" class="mobilegridcell67" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_41 -->
+                                    <div name="mobilelabel_41" id="j_211" dsid="mobilelabel_41" data-role="appery_label"
+                                    class=' mobilelabel43 '>
+                                        How many have have Faucet Aerators?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_39 -->
+                            <td id="j_212" name="mobilegridcell_39" class="mobilegridcell68" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- faucets1 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput28 ">
+                                        <input type="number" name="faucets1" dsid="faucets1" id="j_213" value="Input" tabIndex="7"
+                                        data-theme="a" class=' mobiletextinput28 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- mobilelabel_31 -->
+                <div name="mobilelabel_31" id="j_203" dsid="mobilelabel_31" data-role="appery_label"
+                class=' mobilelabel40 '>
+                    High Efficiency Fixtures
+                </div>
+                <!-- mobilegrid_7 -->
+                <div class="mobilegrid9_wrapper">
+                    <table id="j_182" class=" mobilegrid9" dsid="mobilegrid_7" name="mobilegrid_7" cellpadding=0
+                    cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="mobilegrid9_row_0">
+                            <!-- mobilegridcell_8 -->
+                            <td id="j_183" name="mobilegridcell_8" class="mobilegridcell55" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_18 -->
+                                    <div name="mobilelabel_18" id="j_184" dsid="mobilelabel_18" data-role="appery_label"
+                                    class=' mobilelabel35 '>
+                                        How many toilets?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_9 -->
+                            <td id="j_185" name="mobilegridcell_9" class="mobilegridcell56" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- toilets1 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput22 ">
+                                        <input type="number" name="toilets1" dsid="toilets1" id="j_186" value="Input" tabIndex="1"
+                                        data-theme="a" class=' mobiletextinput22 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid9_row_1">
+                            <!-- mobilegridcell_10 -->
+                            <td id="j_187" name="mobilegridcell_10" class="mobilegridcell57" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_20 -->
+                                    <div name="mobilelabel_20" id="j_188" dsid="mobilelabel_20" data-role="appery_label"
+                                    class=' mobilelabel36 '>
+                                        How many Low-Flow toilets?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_11 -->
+                            <td id="j_189" name="mobilegridcell_11" class="mobilegridcell58" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- lowFlowToilets1 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput23 ">
+                                        <input type="number" name="lowFlowToilets1" dsid="lowFlowToilets1" id="j_190" value="Input"
+                                        tabIndex="2" data-theme="a" class=' mobiletextinput23 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid9_row_2">
+                            <!-- mobilegridcell_12 -->
+                            <td id="j_191" name="mobilegridcell_12" class="mobilegridcell59" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_21 -->
+                                    <div name="mobilelabel_21" id="j_192" dsid="mobilelabel_21" data-role="appery_label"
+                                    class=' mobilelabel37 '>
+                                        How many urinals?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_13 -->
+                            <td id="j_193" name="mobilegridcell_13" class="mobilegridcell60" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- urinals1 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput24 ">
+                                        <input type="number" name="urinals1" dsid="urinals1" id="j_194" value="Input" tabIndex="3"
+                                        data-theme="a" class=' mobiletextinput24 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid9_row_3">
+                            <!-- mobilegridcell_14 -->
+                            <td id="j_195" name="mobilegridcell_14" class="mobilegridcell61" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_22 -->
+                                    <div name="mobilelabel_22" id="j_196" dsid="mobilelabel_22" data-role="appery_label"
+                                    class=' mobilelabel38 '>
+                                        How many Ultra Low-Flow Urinals?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_15 -->
+                            <td id="j_197" name="mobilegridcell_15" class="mobilegridcell62" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- ultraLowFlowUrinals1 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput25 ">
+                                        <input type="number" name="ultraLowFlowUrinals1" dsid="ultraLowFlowUrinals1" id="j_198"
+                                        value="Input" tabIndex="4" data-theme="a" class=' mobiletextinput25 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid9_row_4">
+                            <!-- mobilegridcell_16 -->
+                            <td id="j_199" name="mobilegridcell_16" class="mobilegridcell63" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilelabel_32 -->
+                                    <div name="mobilelabel_32" id="j_200" dsid="mobilelabel_32" data-role="appery_label"
+                                    class=' mobilelabel39 '>
+                                        How many have automatic controls (all the high efficiency fixtures)?
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_17 -->
+                            <td id="j_201" name="mobilegridcell_17" class="mobilegridcell64" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- automaticControls1 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput26 ">
+                                        <input type="number" name="automaticControls1" dsid="automaticControls1" id="j_202"
+                                        value="Input" tabIndex="5" data-theme="a" class=' mobiletextinput26 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- mobilebutton_53 -->
+                <a data-role="button" name="mobilebutton_53" dsid="mobilebutton_53" class='  mobilebutton9'
+                id='j_214' data-corners="true" data-icon="arrow-r" data-iconpos="right" data-mini="false"
+                data-theme="a" tabIndex="8">
+                Next
+                </a>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class=" mobilefooter8" name="mobilefooter1"
+            dsid="mobilefooter1" id="j_215" data-theme="a">
+            </div>
+        </div>
+    </body>
+
+</html>
